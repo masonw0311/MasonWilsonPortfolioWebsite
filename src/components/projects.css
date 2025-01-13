@@ -1,0 +1,470 @@
+/* Projects Section */
+.projects-section {
+  background: linear-gradient(180deg, #05050b, #0a083f);
+  padding: 50px 5%;
+  color: white;
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Start slightly off-screen */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0); /* Move back to original position */
+}
+/* About Me Section */
+.projects-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  color: white;
+  background: none;
+}
+
+.intro-text {
+  flex: 1;
+  max-width: 60%;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.intro-text h1 {
+  font-size: 6rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ccc;
+  font-family: 'Share Tech Mono', monospace;
+  text-align: left;
+}
+
+.projects-title {
+  font-size: 10rem;
+  font-weight: 200;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Projects Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  gap: 20px;
+}
+
+/* Large Card */
+.large-card {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  perspective: 1000px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom:80px;
+}
+
+/* Inner container for 3D flipping */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+}
+
+.large-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back Faces */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Front Face */
+.large-card .front {
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  z-index: 1;
+}
+
+/* Centered Logo on Front */
+.front svg {
+  margin-top: auto;
+  width: 150px;
+  height: 150px;
+  z-index: 2;
+}
+
+/* Text Section at Bottom of Front */
+.front .large-card-text {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.front .large-card-text h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.front .large-card-text p {
+  font-size: 1rem;
+  margin: 5px 0 0;
+  color: #ccc;
+}
+
+/* Back Face */
+.back {
+  background: linear-gradient(145deg, #283d6c, #111);
+  transform: rotateY(180deg);
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  gap: 10px;
+  margin: 10px;
+  height: 100%;
+  overflow-y: auto;
+  font-family: 'Share Tech Mono', monospace;
+  border-radius: 5px;
+}
+
+.back h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #61dafb;
+  margin: 10px;
+  text-align: left;
+}
+
+.back p {
+  font-size: 1.4rem;
+  color: #ccc;
+  margin: 10px 0 0;
+  line-height: 1.6;
+  
+}
+.small-card .back p {
+  font-size: .75rem;
+  color: #ccc;
+  margin: 10px 0 0;
+  line-height: 1.6;
+  
+}
+
+.back ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+  text-align: left;
+}
+
+.back ul li {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.back ul li::before {
+  content: "•";
+  color: #61dafb;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.github-link {
+  font-size: 1.2rem;
+  color: #61dafb;
+  text-decoration: none;
+  border: 2px solid #61dafb;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  margin-bottom: 10px;
+}
+
+.github-link:hover {
+  background-color: #61dafb;
+  color: #20232a;
+  transform: scale(1.05);
+}
+
+/* Smaller Cards */
+.small-card-container {
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.small-card {
+  position: relative;
+  perspective: 1000px;
+  width: 100%;
+  height: 350px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Inner container for small cards */
+.small-card .card-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+}
+
+
+
+.small-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front Face for Small Cards */
+.small-card .front {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #4444445d;
+  border-radius: 5px;
+}
+
+
+
+.small-card .front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Back Face for Small Cards */
+.small-card .back {
+  background: linear-gradient(145deg, #283d6c, #111);
+  transform: rotateY(180deg);
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  gap: 10px;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  font-family: 'Share Tech Mono', monospace;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: .5rem;
+}
+.animation-placeholder {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* Ensures 3D perspective */
+  margin: 50px auto 0; /* Centers horizontally and adds top margin */
+  position: relative; /* Allows positioning */
+  top: 50px; /* Moves the cube down */
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* Ensures 3D effect */
+  animation: spin 8s linear infinite; /* Spin animation */
+}
+
+.face {
+  position: absolute;
+  border: 2px solid #61dafb;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+/* Positioning each face */
+.face.infront {
+  transform: translateZ(150px); /* Half the cube's depth */
+}
+
+.face.inback {
+  transform: rotateY(180deg) translateZ(150px);
+}
+
+.face.inright {
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+.face.inleft {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+.face.intop {
+  transform: rotateX(90deg) translateZ(150px);
+}
+
+.face.inbottom {
+  transform: rotateX(-90deg) translateZ(150px);
+}
+
+/* Animation */
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .animation-placeholder {
+    width: 200px;
+    height: 200px;
+    margin: 30px auto;
+  }
+
+  .face {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animation-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+
+  .face {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .projects-intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-text {
+    max-width: 100%;
+    margin: 0 0 30px 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 30px 5%;
+  }
+
+  .projects-title {
+    font-size: 6rem;
+  }
+
+  .intro-text h1 {
+    font-size: 3rem;
+  }
+
+  .projects-grid {
+    gap: 15px;
+  }
+
+  .animation-placeholder {
+    height: 200px;
+  }
+  .small-card{
+    margin-bottom: 50px;
+  }
+
+.back p {
+  font-size: .75rem;
+  color: #ccc;
+  margin: 10px 0 0;
+  line-height: 1.6;
+  
+}
+}
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 4rem;
+  }
+
+  .intro-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-text p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .animation-placeholder {
+    height: 150px;
+  }
+
+  .small-card .front img {
+    object-fit: contain;
+  }
+
+.back p {
+  font-size: .75rem;
+  color: #ccc;
+  margin: 10px 0 0;
+  line-height: 1.6;
+  
+}
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}

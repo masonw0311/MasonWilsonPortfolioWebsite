@@ -1,0 +1,99 @@
+/* General App Styling */
+.App {
+  text-align: center;
+}
+
+/* Hidden Class for Initial State */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+
+/* Show Class for Fly-in Effect */
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/* Hero Section Styling */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Links */
+.App-link {
+  color: #61dafb;
+}
+
+/* Logo Animation */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  /* Adjust header font size for smaller screens */
+  .App-header {
+    font-size: calc(8px + 2vmin);
+    /* padding: 20px; */
+  }
+
+  /* Adjust logo size for mobile screens */
+  .App-logo {
+    height: 30vmin;
+  }
+
+  /* Center content properly */
+  .App {
+    /* padding: 10px; */
+  }
+
+  /* Adjust fly-in animation for smoother transitions */
+  .hidden {
+    transform: translateX(-50%);
+    transition: all 0.8s ease;
+  }
+}
+
+/* Optional: Custom cursor styles (commented out) */
+/* 
+#custom-cursor {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  cursor: none;
+} 
+*/

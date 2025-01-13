@@ -1,0 +1,202 @@
+/* Contact Section */
+.contact-section {
+    display: grid;
+    grid-template-columns: 40% 30% 30%; /* Left column (black) takes 40%, middle and right take 30% each */
+    grid-template-rows: 1fr; /* Single row layout */
+    height: 100vh; /* Full viewport height */
+   
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        display: flex;
+        flex-direction: column; /* Stack sections vertically */
+        height: auto; /* Allow the section to expand based on content */
+       
+    }
+}
+
+/* Left Column */
+.contact-left {
+    background: #000; /* Black */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 40px; /* Increased padding for better spacing */
+    font-family: 'Share Tech Mono', monospace; /* Use the desired font */
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
+.contact-left h1 {
+    font-size: 3rem; /* Bold and large title */
+    margin-bottom: 20px;
+    color: white; /* Ensures the text is white */
+    text-align: left;
+}
+
+.contact-left p {
+    font-size: 1.2rem; /* Regular size for the description text */
+    margin-bottom: 30px;
+    color: #ccc; /* Light gray for secondary text */
+    font-family: 'Share Tech Mono', monospace;
+    text-align: left;
+}
+
+.contact-left a {
+    font-size: 1.2rem;
+    color: #7a56fc; /* Accent color for links */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.contact-left a:hover {
+    color: #9a76ff; /* Slightly lighter color on hover */
+}
+
+.contact-left ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin: 20px 0 0; /* Spacing around the list */
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.contact-left ul li a {
+    color: white; /* Default color */
+    text-decoration: none; /* Optional: Remove underline */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.contact-left ul li a:hover {
+    color: #61dafb; /* Hover color */
+}
+
+@media (max-width: 768px) {
+    .contact-left {
+        align-items: center; /* Center align content on smaller screens */
+        text-align: center; /* Center text */
+    }
+
+    .contact-left h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+
+    .contact-left p {
+        font-size: 1rem;
+    }
+}
+
+/* Middle Column */
+.contact-middle {
+    background: #101357; /* Purple */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Space testimonials evenly */
+    padding: 40px 20px;
+   
+}
+
+@media (max-width: 768px) {
+    .contact-middle {
+        
+        padding: 20px 10px; /* Reduce padding */
+    }
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Share Tech Mono', monospace;
+    text-align: left;
+}
+
+.testimonial-card .quote-icon {
+    font-size: 3rem; /* Medium quote size */
+    color: #ccc; /* Soft gray */
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    color: white;
+    text-align: left;
+}
+
+.testimonial-card .author {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #fff; /* Brighter for names */
+}
+
+.testimonial-card .author-role {
+    font-size: 0.9rem;
+    color: #b3e0ff; /* Softer text for roles */
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 15px; /* Reduce padding on mobile */
+        text-align: center; /* Center text */
+    }
+
+    .testimonial-card p {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-card .author {
+        font-size: 1.2rem;
+    }
+}
+
+/* Right Column */
+.contact-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.contact-right .top {
+    background: #007f4f; /* Green */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-right .top .testimonial-card {
+    background: #00965a; /* Slightly lighter shade of green */
+    color: #e6fff2; /* Soft white text */
+}
+
+.contact-right .bottom {
+    background: #00a0a0; /* Teal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-right .bottom .testimonial-card {
+    background: #00c3c3; /* Slightly lighter shade of teal */
+    color: #f0ffff; /* Soft white text */
+}
+
+@media (max-width: 768px) {
+    .contact-right {
+        grid-template-rows: none;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .contact-right .top,
+    .contact-right .bottom {
+        padding: 10px; /* Adjust padding */
+    }
+}

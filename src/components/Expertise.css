@@ -1,0 +1,130 @@
+ /* Expertise Section */
+.expertise-section {
+    background-color: #191b42; /* Dark background */
+    background: linear-gradient(180deg,  #1c1e45, #060606); /* Same background color as the divider */
+    color: white;
+    padding: 100px 10%; /* Increased padding for better spacing */
+    text-align: center;
+    position: relative; /* Ensure z-index works */
+    flex-direction: column;
+    min-height: 400px;
+    z-index: 2; /* Higher than the shape divider */
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.expertise-title {
+    font-size: 6rem; /* Increased size */
+    font-weight: 700; /* Added font weight for emphasis */
+    margin-bottom: 50px; /* More spacing below */
+    position: relative; /* Ensures text layering */
+    z-index: 3; /* Ensures it stays above the shape divider */
+}
+
+.expertise-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between cards */
+    justify-items: center;
+    position: relative; /* To layer above the shape divider */
+    z-index: 3;
+}
+
+.expertise-card {
+    background-color: #2a2a2a; /* Card background */
+    border: 1px solid #444; /* Subtle border */
+    /* border-radius: 12px; Rounded corners */
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    opacity: 0; /* Start hidden */
+    transform: translateY(50px); /* Start slightly lower */
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+}
+
+.expertise-card:hover {
+    transform: translateY(-10px); /* Hover effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+.expertise-card.show {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Return to original position */
+  }
+  
+  .expertise-card:nth-child(1) {
+    transition-delay: 100ms;
+  }
+  
+  .expertise-card:nth-child(2) {
+    transition-delay: 200ms;
+  }
+  
+  .expertise-card:nth-child(3) {
+    transition-delay: 300ms;
+  }
+.icon {
+    font-size: 3.5rem; /* Increased size */
+    margin-bottom: 15px;
+    color: white;
+}
+
+h3 {
+    font-size: 1.8rem; /* Increased size */
+    font-weight: 600; /* Added weight */
+    margin-bottom: 10px;
+    color: white; /* Consistent font color */
+}
+
+.highlight-pink {
+    color: #ff007f;
+    text-decoration: underline; /* Add underline */
+}
+
+.highlight-blue {
+    color: #007bff;
+    text-decoration: underline; /* Add underline */
+}
+
+.highlight-orange {
+    color: #ff7f00;
+    text-decoration: underline; /* Add underline */
+}
+
+p {
+    font-size: 1rem;
+    color: #cccccc;
+    text-align: center;
+}
+
+/* Shape Divider */
+.custom-shape-divider-top-1736206826 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1; /* Lower than the expertise section */
+}
+
+.custom-shape-divider-top-1736206826 svg {
+    position: relative;
+    display: block;
+    width: calc(139% + 1.3px);
+    height: 238px;
+}
+
+.custom-shape-divider-top-1736206826 .shape-fill {
+    fill: #050c17;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .expertise-title {
+        font-size: 2.5rem; /* Adjust for smaller screens */
+    }
+
+    .expertise-card {
+        width: 100%; /* Full-width cards on small screens */
+    }
+}
