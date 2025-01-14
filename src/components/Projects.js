@@ -115,7 +115,10 @@ function Projects() {
   <div class="small-card ">
     <div class="card-inner">
       <div class="front">
-        <img src="./pitchdata.png" alt="Project" />
+      <img 
+  src={process.env.PUBLIC_URL + "/pitchdata.png"} 
+  alt="Project" 
+/>
         <div class="small-card-text">
           <h3>Baseball Pitch Analyzer</h3>
           <p>Machine Learning</p>
@@ -139,7 +142,10 @@ and Matplotlib, to create an interactive data visualization dashboard.
   <div class="small-card 2">
     <div class="card-inner">
       <div class="front">
-        <img src="./LakeVirginiaProject.png" alt="Project" />
+      <img
+  src={process.env.PUBLIC_URL + "/LakeVirginiaProject.png"}
+  alt="Project"
+/>
         <div class="small-card-text">
           <h3>Lake Virginia </h3>
           <p>Web Development</p>
