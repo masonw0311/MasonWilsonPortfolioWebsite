@@ -58,7 +58,7 @@ const Contact = () => {
       <div className="contact-right">
         {/* Top Section */}
         <div className="top">
-          <div className="testimonial-card">
+          {/* <div className="testimonial-card">
             <div className="quote-icon">“</div>
             <p>
               Mason’s ability to troubleshoot and diagnose complex technical
@@ -67,11 +67,11 @@ const Contact = () => {
             </p>
             <div className="author">Jane Doe</div>
             <div className="author-role">Senior Engineer @ TechCorp</div>
-          </div>
+          </div> */}
         </div>
         {/* Bottom Section */}
         <div className="bottom">
-          <div className="testimonial-card">
+          {/* <div className="testimonial-card">
             <div className="quote-icon">“</div>
             <p>
               Mason demonstrates an unmatched passion for excellence in every
@@ -79,7 +79,7 @@ const Contact = () => {
             </p>
             <div className="author">John Smith</div>
             <div className="author-role">Team Lead @ InnovateTech</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
