@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/MasonWilsonPortfolioWebsite/static/css/main.5bf8ddbe.chunk.css",
+    "main.js": "/MasonWilsonPortfolioWebsite/static/js/main.722d4f1a.chunk.js",
+    "main.js.map": "/MasonWilsonPortfolioWebsite/static/js/main.722d4f1a.chunk.js.map",
+    "runtime~main.js": "/MasonWilsonPortfolioWebsite/static/js/runtime~main.75c0b503.js",
+    "runtime~main.js.map": "/MasonWilsonPortfolioWebsite/static/js/runtime~main.75c0b503.js.map",
+    "static/js/2.b0d5dbcf.chunk.js": "/MasonWilsonPortfolioWebsite/static/js/2.b0d5dbcf.chunk.js",
+    "static/js/2.b0d5dbcf.chunk.js.map": "/MasonWilsonPortfolioWebsite/static/js/2.b0d5dbcf.chunk.js.map",
+    "static/js/3.731075be.chunk.js": "/MasonWilsonPortfolioWebsite/static/js/3.731075be.chunk.js",
+    "static/js/3.731075be.chunk.js.map": "/MasonWilsonPortfolioWebsite/static/js/3.731075be.chunk.js.map",
+    "index.html": "/MasonWilsonPortfolioWebsite/index.html",
+    "precache-manifest.7431dfadbc46a0eb2fd3c4b782fd1be9.js": "/MasonWilsonPortfolioWebsite/precache-manifest.7431dfadbc46a0eb2fd3c4b782fd1be9.js",
+    "service-worker.js": "/MasonWilsonPortfolioWebsite/service-worker.js",
+    "static/css/main.5bf8ddbe.chunk.css.map": "/MasonWilsonPortfolioWebsite/static/css/main.5bf8ddbe.chunk.css.map"
+  }
+}
